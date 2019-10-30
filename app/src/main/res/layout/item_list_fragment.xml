@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_list_recylcer_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical"
+    android:scrollingCache="true"
+    android:background="@drawable/border"
+    android:layout_margin="@dimen/small_margin"
+    android:paddingStart="@dimen/small_margin"
+    android:paddingEnd="@dimen/small_margin"
+    android:paddingBottom="@dimen/small_margin"/>

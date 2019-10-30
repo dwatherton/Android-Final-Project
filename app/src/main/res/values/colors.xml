@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1A2BF7</color>
+    <color name="colorPrimaryDark">#1628E3</color>
+    <color name="colorAccent">#666666</color>
+    <color name="colorAccentLighter">#DDDDDD</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#FFFFFF</color>
+    <color name="positiveFeedbackColor">#19DA23</color>
+    <color name="moderateFeedbackColor">#FFEE58</color>
+    <color name="negativeFeedbackColor">#E60620</color>
+</resources>

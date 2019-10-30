@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    tools:context=".ShoppingCartActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/shopping_cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:menu="@menu/shopping_cart_toolbar_menu"/>
+
+    <fragment
+        android:id="@+id/shopping_cart_list_fragment"
+        android:name="com.ualr.androidfinalproject.ShoppingCartListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        android:scrollingCache="true"
+        android:layout_margin="@dimen/medium_margin"
+        app:layout_constraintTop_toBottomOf="@id/shopping_cart_toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/totals_table"
+        tools:layout="@layout/item_list_fragment" />
+
+    <TableLayout
+        android:id="@+id/totals_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shopping_cart_list_fragment"
+        app:layout_constraintBottom_toTopOf="@id/proceed_to_checkout_button"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:text="@string/sub_total" />
+
+            <TextView
+                android:id="@+id/shopping_cart_sub_total"
+                android:gravity="end"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="2"
+                android:text="@string/blank" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:text="@string/tax" />
+
+            <TextView
+                android:id="@+id/shopping_cart_tax"
+                android:gravity="end"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="2"
+                android:text="@string/blank" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_weight="1"
+                android:text="@string/total" />
+
+            <TextView
+                android:id="@+id/shopping_cart_total"
+                android:gravity="end"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_weight="2"
+                android:text="@string/blank" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/proceed_to_checkout_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        android:layout_marginBottom="@dimen/large_margin"
+        android:text="@string/proceed_to_checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totals_table"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="onProceedToCheckoutButtonClicked"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
