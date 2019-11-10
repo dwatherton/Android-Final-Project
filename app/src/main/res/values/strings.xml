@@ -1,3 +1,26 @@
 <resources>
     <string name="app_name">Android Final Project</string>
+    <string name="brand_name">Shopping App</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="need_an_account">Need an account?</string>
+    <string name="create_one">Create One!</string>
+    <string name="search_items">Search Items</string>
+    <string name="view_shopping_cart">Shopping Cart</string>
+    <string name="logout">Logout</string>
+    <string name="item_image">Item Image</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_price">Item Price</string>
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
+    <string name="sub_total">Sub-Total</string>
+    <string name="tax">Tax</string>
+    <string name="total">Total</string>
+    <string name="blank">xxxxxxx</string>
+    <string name="clear_shopping_cart">Clear Shopping Cart</string>
+    <string name="item_rating">Rating</string>
+    <string name="item_description">Item Description</string>
+    <string name="add_to_cart">Add to Cart</string>
 </resources>
